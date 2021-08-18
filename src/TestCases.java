@@ -19,11 +19,17 @@ public class TestCases {
     
     public void singleValueIsReplied() throws Exception{
         assertEquals(calculator.add("1"),1);
-    }
+    } 
     
     //Test case2  
     public void commaDelimitedReturnsSum() throws Exception{
         assertEquals(calculator.add("1,2"),3);
     } 
+    
+    //Test case3
+    public void twoNumbersNewLineDelimitedReturnsSum() throws Exception{
+        assertEquals(calculator.add("1\n2"),3);
+    }
 }   
+
 
