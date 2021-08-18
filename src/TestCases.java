@@ -42,7 +42,10 @@ public class TestCases {
     	calculator.add("-1");
     }
   
-   
+    //Test case6
+    public void ignoresNumberGreaterThan1000() throws Exception {
+    	assertEquals(calculator.add("10,10,1001"),20);
+    }
 }   
 
-
+  
