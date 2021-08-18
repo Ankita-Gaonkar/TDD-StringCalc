@@ -7,6 +7,6 @@ Test Case 3 - Returns sum of two numbers while new lines between numbers (instea
 
 Test Case 4 - Support different delimiters for example “//;\n1;2” should return three where the default delimiter is ‘;’
 
-Test Case 5 - negative number will throw an exception 
+Test Case 5 - Negative number will throw an exception and if there are multiple negatives, it will display all of them in the exception message.
 
 Test Case 6 - Numbers bigger than 1000 should be ignored
