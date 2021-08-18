@@ -11,7 +11,8 @@ public class TestCases {
     public void init(){
         calculator =new StringCalculator();
     }
-     
+    
+    //Test case1
     public void emptyStringReturnsZero() throws Exception{
         assertEquals(calculator.add(""),0);
     }
@@ -19,5 +20,10 @@ public class TestCases {
     public void singleValueIsReplied() throws Exception{
         assertEquals(calculator.add("1"),1);
     }
+    
+    //Test case2  
+    public void commaDelimitedReturnsSum() throws Exception{
+        assertEquals(calculator.add("1,2"),3);
+    } 
 }   
 
