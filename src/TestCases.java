@@ -30,6 +30,11 @@ public class TestCases {
     public void twoNumbersNewLineDelimitedReturnsSum() throws Exception{
         assertEquals(calculator.add("1\n2"),3);
     }
+    
+    //Test case4
+    public void threeNumbersDelimitedBothWaysReturnsSum() throws Exception{
+        assertEquals(calculator.add("1,2,3"),6);
+    }
 }   
 
 
