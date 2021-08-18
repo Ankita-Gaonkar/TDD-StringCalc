@@ -3,7 +3,7 @@ public class StringCalculator {
 
 	private final String delimiter= ",|\n";
 	
-	public int add(String input) {
+	public int add(String input) throws Exception {
 		String[] numbers = input.split(delimiter);
 		
 		if(isEmpty(input)){
@@ -18,13 +18,22 @@ public class StringCalculator {
         
  	}
 
-	private int getSum(String[] numbers) {
+	private int getSum(String[] numbers) throws Exception{
+		findDangerousInput(numbers);
 		int sum = 0;
 		for(String current:numbers) {
-			sum += Integer.parseInt(current);
+			sum += stringToInt(current);
 		}
 		return sum; 
 	}
+	
+	 private void findDangerousInput(String[] numbers) throws Exception {
+	    	for(String current:numbers){
+	            if(stringToInt(current)<0) {
+	        	   throw new Exception("Negatives Not Allowed:");
+	            }
+	    	}
+	 }	
 	
 	private boolean isEmpty(String input) {
 		return input.isEmpty();

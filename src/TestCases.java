@@ -35,6 +35,14 @@ public class TestCases {
     public void threeNumbersDelimitedBothWaysReturnsSum() throws Exception{
         assertEquals(calculator.add("1,2,3"),6);
     }
+    
+    //Test case5 
+    @Test(expectedExceptions=Exception.class)
+    public void negativeInputReturnsException() throws Exception {
+    	calculator.add("-1");
+    }
+  
+   
 }   
 
 
